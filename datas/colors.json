@@ -1,0 +1,26 @@
+[
+    {
+        "name" : "AntiqueWhite",
+        "code" : "#FAEBD7"
+    },
+
+    {
+        "name" : "Coral",
+        "code" : "#FF7F50"
+    },
+
+    {
+        "name" : "DarkOrange",
+        "code" : "#FF8C00"
+    },
+
+    {
+        "name" : "DarkRed",
+        "code" : "#8B0000"
+    },
+    
+    {
+        "name" : "LightGoldenRodYellow",
+        "code" : "#FAFAD2"
+    }
+]
