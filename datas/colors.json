@@ -1,26 +1,22 @@
 [
     {
-        "name" : "AntiqueWhite",
-        "code" : "#FAEBD7"
+        "name": "AntiqueWhite",
+        "code": "#FAEBD7"
     },
-
     {
-        "name" : "Coral",
-        "code" : "#FF7F50"
+        "name": "CornflowerBlue",
+        "code": "#6495ED"
     },
-
     {
-        "name" : "DarkOrange",
-        "code" : "#FF8C00"
+        "name": "DarkSeaGreen",
+        "code": "#8FBC8F"
     },
-
     {
-        "name" : "DarkRed",
-        "code" : "#8B0000"
+        "name": "DeepPink",
+        "code": "#FF1493"
     },
-    
     {
-        "name" : "LightGoldenRodYellow",
-        "code" : "#FAFAD2"
+        "name": "Cornsilk",
+        "code": "#FFF8DC"
     }
 ]

@@ -1,6 +1,5 @@
 const http = require('http');
 const fs = require('fs');
-const { features } = require('process');
 const port = 5555;
 
 const server = http.createServer((req, res) => {
@@ -11,8 +10,9 @@ const server = http.createServer((req, res) => {
 
     //router
     switch (true) {
-        case req.method === '/' && req.method === 'GET':
-            fs.readFile("./views/index.html", ( err, file) => {
+
+        case req.url ==="/" && req.method==="GET":
+            fs.readFile("./views/index.html", (err, file) =>{
                 res.setHeader('Content-Type', 'text/html');
                 res.writeHead(200);
                 res.end(file);
@@ -21,7 +21,7 @@ const server = http.createServer((req, res) => {
 
         case req.method === '/script.js' && req.method === 'GET':
             fs.readFile("./public/script.js", ( err, script) => {
-                res.setHeader('Content-Type', 'text/javascript');
+                res.setHeader('Content-Type', 'application/javascript');
                 res.writeHead(200);
                 res.end(script );
             })
@@ -32,6 +32,14 @@ const server = http.createServer((req, res) => {
                 res.setHeader('Content-Type', 'image/ico')
                 res.writeHead(200);
                 res.end(icon);
+            })
+        break;
+
+        case req.url==="/colors" && req.method==="GET":
+            fs.readFile("./datas/colors.json", (err,data) => {
+                res.setHeader('Content-Type', 'application/json');
+                res.writeHead(200);
+                res.end(data);
             })
         break;
 
