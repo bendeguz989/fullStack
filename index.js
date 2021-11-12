@@ -27,6 +27,14 @@ const server = http.createServer((req, res) => {
             })
         break;
 
+        case req.method ==="/favicon.ico" && req.method ==="GET":
+            fs.readFile("./public/favicon.ico", (err, icon) => {
+                res.setHeader('Content-Type', 'image/ico')
+                res.writeHead(200);
+                res.end(icon);
+            })
+        break;
+
         default:
             fs.readFile("./views/error.html", ( err, file) => {
                 res.setHeader('Content-Type', 'text/html');
