@@ -19,3 +19,26 @@ async function listAndRenderColors(){
 /*
 async / await
 */
+
+document.getElementById('create-color').onsubmit = async function (event){
+  event.preventDefault();
+
+  const code = event.target.elements.code.value; 
+  const name = event.target.elements.name.value; 
+  
+  //console.log(`${name} (${code})`);
+
+  const res = await fetch( '/colors', {
+    method: "POST", 
+    headers: {
+      'content-type' : 'application/json',
+    },
+    body: JSON.stringify({code,name}),
+  } );
+
+  if(res.ok){
+    listAndRenderColors();
+  }else{
+    alert("Hiba történt");
+  }
+}
